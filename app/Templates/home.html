@@ -1,10 +1,155 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+
+{% block title %}
+    <title>TallyBI</title>
+
+{% endblock %}
+
+
+{% block content %}
+    <br>
+    <h1>TallyBI</h1>
+	<h5>Your Business Intelligence Employee Management Tracker</h5>
+	<br>
+
+  <div class="jumbotron">
+    <div class="jumbotron-content">
+     	<h2 class="display-4">YOUR PATH TO HAPPIER AND MORE PRODUCTIVE EMPLOYEES</h2><br>
+		<p class="lead">
+		<h2 class="display-5">GROW. EMPOWER. PRODUCE.</h2>
+		</p>
+	</div>
+  </div>
+<br>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card card-success">
+                <div class="card-header">
+                    <h4 class="text-xs-center">Free Trial Package (Limited Access)</h4>
+                </div>
+                <div class="card-block text-xs-center">
+                    <p class="lead">
+                        <strong>$0</strong>
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush text-xs-center">
+                    <li class="list-group-item">
+                        Personal Use
+                        <span class="glyphicon glyphicon-ok float-xs-right"></span>
+                    </li>
+                    <li class="list-group-item">
+                        Single Commercial License
+                        <span class="glyphicon glyphicon-remove float-xs-right"></span>
+                    </li>
+                    <li class="list-group-item">
+                        Multiple site Commercial license
+                        <span class="glyphicon glyphicon-remove float-xs-right"></span>
+                    </li>
+                    <li class="list-group-item">
+                        Technical Support
+                        <span class="glyphicon glyphicon-remove float-xs-right"></span>
+                    </li>
+                </ul>
+                <div class="card-footer">
+                    <a class="btn btn-lg btn-block btn-success">Download</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-info">
+                <div class="card-header">
+                    <h4 class="text-xs-center">Standard Monthly Package(Full Access)</h4>
+                </div>
+                <div class="card-block text-xs-center">
+                    <p class="lead">
+                        <strong>$99.99 / month</strong>
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush text-xs-center">
+                    <li class="list-group-item">
+                        Personal Use
+                        <span class="glyphicon glyphicon-ok float-xs-right"></span>
+                    </li>
+                    <li class="list-group-item">
+                        Single Commercial License
+                        <span class="glyphicon glyphicon-ok float-xs-right"></span>
+                    </li>
+                    <li class="list-group-item">
+                        Multiple site Commercial license
+                        <span class="glyphicon glyphicon-remove float-xs-right"></span>
+                    </li>
+                    <li class="list-group-item">
+                        Technical Support
+                        <span class="glyphicon glyphicon-ok float-xs-right"></span>
+                    </li>
+                </ul>
+                <div class="card-footer">
+                    <a class="btn btn-lg btn-block btn-info">Purchase</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h4 class="text-xs-center">Premium Yearly Package (Full Access)</h4>
+                </div>
+                <div class="card-block text-xs-center">
+                    <p class="lead">
+                        <strong>$699.99 / year</strong>
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush text-xs-center">
+                    <li class="list-group-item">
+                        Personal Use
+                        <span class="glyphicon glyphicon-ok float-xs-right"></span>
+                    </li>
+                    <li class="list-group-item">
+                        Single Commercial License
+                        <span class="glyphicon glyphicon-ok float-xs-right"></span>
+                    </li>
+                    <li class="list-group-item">
+                        Multiple site Commercial license
+                        <span class="glyphicon glyphicon-ok float-xs-right"></span>
+                    </li>
+                    <li class="list-group-item">
+                        Technical Support
+                        <span class="glyphicon glyphicon-ok float-xs-right"></span>
+                    </li>
+                </ul>
+                <div class="card-footer">
+                    <a class="btn btn-lg btn-block btn-primary">Purchase</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<section id="contact">
+<div class="row">
+	<div id="getintouch" class="col-sm-6" >
+		<h2>GET IN TOUCH<h2>
+			<i class="fa fa-github" style="font-size:35px;color:#3B6BB9"></i>
+			<i class="fa fa-linkedin-square" style="font-size:35px;color:#3B6BB9"></i>
+				<i class="fa fa-facebook-official" style="font-size:35px;color:#3B6BB9"></i>
+			</div>
+			<form class="col-sm-6">
+				<div class="form-group">
+					<label for="usr"></label>
+					<input type="text" class="form-control" id="usr" placeholder="Your Name">
+				</div>
+				<input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+				<div class="form-group">
+					<label for="comment"></label>
+					<textarea class="form-control" rows="4" id="comment"placeholder="Leave us a message!"></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary">Send</button>
+			</form>
+		</div>
+</section>
+{% endblock%}
+

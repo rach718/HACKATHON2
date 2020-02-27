@@ -1,10 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+	{% block content %}
+
+	<form method="post">
+		{{ form.hidden_tag() }}
+        <p>
+            {{ form.firstname.label (size=32) }}
+            {{ form.firstname }}
+        </p>
+        <p>
+            {{ form.lastname.label (size=32) }}
+            {{ form.lastname }}
+        </p>
+        <p>
+            {{ form.email.label (size=32) }}
+            {{ form.email }}
+        </p>
+        <p>
+            {{ form.companyname.label (size=32) }}
+            {{ form.companyname }}
+        </p>
+        <p>
+            {{ form.areaofbusiness.label (size=32) }}
+            {{ form.areaofbusiness }}
+        </p>
+        <p>
+            {{ form.companyrole.label (size=32) }}
+            {{ form.companyrole }}
+        </p>
+        <p>
+            {{ form.officeaddress.label (size=32) }}
+            {{ form.officeaddress }}
+        </p>
+        <p>
+            {{ form.phonenumber.label (size=32) }}
+            {{ form.phonenumber }}
+        </p>
+
+        <p>
+            {{ form.numofemployees.label (size=32) }}
+            {{ form.numofemployees }}
+        </p>
+        <p>
+            {{ form.numofdepartments.label (size=32) }}
+            {{ form.numofdepartments }}
+        </p>
+        <p>
+		    {{ form.username.label (size=32) }}
+		    {{ form.username }}
+		</p>
+		<p>
+		    {{ form.password.label (size=32) }}
+		    {{ form.password }}
+		</p>
+        <p>
+		    {{ form.confirm.label (size=32) }}
+		    {{ form.confirm }}
+		</p>
+        <p>
+		{{ form.submit }}
+		</p>
+	</form>
+
+	{% endblock %}ml>
