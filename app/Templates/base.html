@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookstore</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="hackathon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<h2><a href={{url_for('index')}} class="btn btn-lg btn-primary">The Flask Bookstore</a></h2>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <hr>
+    <ul class="alert alert-info">
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+    <hr>
+  {% endif %}
+{% endwith %}
+
+{% block content %}
+{% endblock %}
+
+</body>
