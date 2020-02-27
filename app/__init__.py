@@ -9,9 +9,9 @@ app.config['SECRET_KEY'] = random._urandom(56)
 
 # Database Connection
 db_info = {'host': 'localhost',
-           'database': 'hackathon2',
-           'psw': 'dev770',
-           'user': 'racheljakob',
+           'database': 'tollybi',
+           'psw': 'eranbolan',
+           'user': 'postgres',
            'port': ''}
 app.config[
     'SQLALCHEMY_DATABASE_URI'] = f"postgres://{db_info['user']}:{db_info['psw']}@{db_info['host']}/{db_info['database']}"

@@ -2,21 +2,27 @@ from app import db
 from datetime import datetime
 
 
-class Book(db.Model):
+class Admin(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(64), nullable=False)
-    author_id = db.Column(db.Integer, db.ForeignKey('author.author_id'))
-    pub_date = db.Column(db.DateTime, default=datetime.now, nullable=True)
-    price = db.Column(db.Float, default=5.0)
+    username = db.Column(db.String(30), nullable=False)
+    password = db.Column(db.String(40),nullable=False)
+    email = db.Column(db.DateTime, default=datetime.now, nullable=True)
+    first_name = db.Column(db.String(30), nullable=False)
+    last_name = db.Column(db.String(30), nullable=False)
+    company_name = db.Column(db.String(30), nullable=False)
+    area_of_business = db.Column(db.string(40), nullable=False)
+    office_address = db.Column(db.String(40), nullable=False)
+    phone_number = db.Column(db.Int(25),nullable=False)
+    company_role = db.Column(db.String(20), nullable=False)
+    num_employees = db.Column(db.Int(30), nullable=False)
+    num_departments = db.Column(db.Int(30), nullable=False)
+    register_date = db.Column(db.DateTime, default=datetime.now, nullable=True)
 
     def __repr__(self):
-        return f"<Book: {self.title}>"
+        return f"<Admin: {self.username}>"
 
 
-class Author(db.Model):
-    author_id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50))
-    books = db.relationship('Book', backref='author')
+class results_data(db.Model):
+    id = db.Column(db.Integer,primary_key=True)
+    admin_id = db.Column(db.Integer,db.ForeignKey("Admin.id"),nullable=False)
 
-    def __repr__(self):
-        return self.name
