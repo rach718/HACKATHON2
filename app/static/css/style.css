@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Exo|Nanum+Gothic|Orbitron|Patrick+Hand|Quattrocento|Tomorrow&display=swap');
+
+html,h1,h2,p, button{
+	font-family: "Tomorrow";
+}
+
+h1{
+    text-align: center;
+    color: #3B6BB9;
+    text-shadow: 1px 1px #5A86CA;
+    font-size: 50px;
+
+}
+
+h5{
+    text-align: center;
+    color: #3B6BB9;
+}
+
+.jumbotron{
+  background-image: url('/static/images/home4.jpg');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto;
+}
+
+.jumbotron-content {
+    color: white;
+    text-align: center;
+}
+
+.navbar{
+    text-align: center;
+}
+
+#contact {
+	height: 360px;
+	margin-top: 30px;
+}
+
+
+.shrinkbox {
+	width: 80%;
+	margin: auto;
+	padding-top: 25px;
+}

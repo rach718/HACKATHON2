@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from app import app, db
 from flask import flash, redirect, url_for, request, render_template
 from app.forms import *
@@ -68,3 +69,6 @@ def register():
 @app.route('/form',methods=['GET','POST'])
 def form():
 
+=======
+
+>>>>>>> 443cc9ef3e0d0ab3c2fb9285af392e0839cb8a51

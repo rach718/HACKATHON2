@@ -26,4 +26,5 @@ class Register(FlaskForm):
     num_departments = IntegerField(lable="Departments number",validators=[data_required()])
     submit = SubmitField()
 
-class Form(FlaskForm)
+class Form(FlaskForm):
+    pass

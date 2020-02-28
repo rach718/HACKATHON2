@@ -1,6 +1,5 @@
-from app import db
-from datetime import datetime
 
+<<<<<<< HEAD
 
 class Admin(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -26,3 +25,5 @@ class results_data(db.Model):
     id = db.Column(db.Integer,primary_key=True)
     admin_id = db.Column(db.Integer,db.ForeignKey("Admin.id"),nullable=False)
 
+=======
+>>>>>>> 443cc9ef3e0d0ab3c2fb9285af392e0839cb8a51
