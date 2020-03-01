@@ -1,49 +1,55 @@
 {% extends 'base.html' %}
 
 	{% block content %}
+        {% with messages = get_flashed_messages() %}
+  			{% if messages %}
+    		   {% for message in messages %}
+      			  {{ message }}
+    		   {% endfor %}
+  	         {% endif %}
+        {% endwith %}
 
-	<form method="post">
-		{{ form.hidden_tag() }}
+	<form method="POST">
         <p>
-            {{ form.firstname.label (size=32) }}
-            {{ form.firstname }}
+            {{ form.first_name.label (size=32) }}
+            {{ form.first_name }}
         </p>
         <p>
-            {{ form.lastname.label (size=32) }}
-            {{ form.lastname }}
+            {{ form.last_name.label (size=32) }}
+            {{ form.last_name }}
         </p>
         <p>
             {{ form.email.label (size=32) }}
             {{ form.email }}
         </p>
         <p>
-            {{ form.companyname.label (size=32) }}
-            {{ form.companyname }}
+            {{ form.company_name.label (size=32) }}
+            {{ form.company_name }}
         </p>
         <p>
-            {{ form.areaofbusiness.label (size=32) }}
-            {{ form.areaofbusiness }}
+            {{ form.area_of_business.label (size=32) }}
+            {{ form.area_of_business }}
         </p>
         <p>
-            {{ form.companyrole.label (size=32) }}
-            {{ form.companyrole }}
+            {{ form.company_role.label (size=32) }}
+            {{ form.company_role }}
         </p>
         <p>
-            {{ form.officeaddress.label (size=32) }}
-            {{ form.officeaddress }}
+            {{ form.office_address.label (size=32) }}
+            {{ form.office_address }}
         </p>
         <p>
-            {{ form.phonenumber.label (size=32) }}
-            {{ form.phonenumber }}
+            {{ form.phone_number.label (size=32) }}
+            {{ form.phone_number }}
         </p>
 
         <p>
-            {{ form.numofemployees.label (size=32) }}
-            {{ form.numofemployees }}
+            {{ form.num_of_employees.label (size=32) }}
+            {{ form.num_of_employees }}
         </p>
         <p>
-            {{ form.numofdepartments.label (size=32) }}
-            {{ form.numofdepartments }}
+            {{ form.num_of_departments.label (size=32) }}
+            {{ form.num_of_departments }}
         </p>
         <p>
 		    {{ form.username.label (size=32) }}
@@ -56,6 +62,9 @@
         <p>
 		    {{ form.confirm.label (size=32) }}
 		    {{ form.confirm }}
+		</p>
+         <p>
+		    {{ form.recaptcha}}
 		</p>
         <p>
 		{{ form.submit }}
