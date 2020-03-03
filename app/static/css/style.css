@@ -45,3 +45,9 @@ h5{
 	margin: auto;
 	padding-top: 25px;
 }
+
+.blue{
+    color:blue;
+    font-weight: bold;
+    margin-right:8px;
+}

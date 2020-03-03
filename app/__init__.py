@@ -30,10 +30,10 @@ app.config['MAIL_ASCII_ATTACHMENTS'] = False
 
 # Database Connection
 db_info = {'host': 'localhost',
-           'database': 'tollybi',
+           'database': 'tallybi',
            'psw': 'eranbolan',
            'user': 'postgres',
-           'port': '5432'}
+           'port': ''}
 app.config[
     'SQLALCHEMY_DATABASE_URI'] = f"postgres://{db_info['user']}:{db_info['psw']}@{db_info['host']}/{db_info['database']}"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False

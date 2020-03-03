@@ -9,58 +9,60 @@
   	         {% endif %}
         {% endwith %}
 
+    <h1>Please fill the following inputs</h1>
+
 	<form method="POST">
         <p>
-            {{ form.first_name.label (size=32) }}
+            {{ form.first_name.label(size=32,class_='blue') }}
             {{ form.first_name }}
         </p>
         <p>
-            {{ form.last_name.label (size=32) }}
+            {{ form.last_name.label (size=32,class_='blue') }}
             {{ form.last_name }}
         </p>
         <p>
-            {{ form.email.label (size=32) }}
+            {{ form.email.label (size=32,class_='blue') }}
             {{ form.email }}
         </p>
         <p>
-            {{ form.company_name.label (size=32) }}
+            {{ form.company_name.label (size=32,class_='blue') }}
             {{ form.company_name }}
         </p>
         <p>
-            {{ form.area_of_business.label (size=32) }}
+            {{ form.area_of_business.label (size=32,class_='blue') }}
             {{ form.area_of_business }}
         </p>
         <p>
-            {{ form.company_role.label (size=32) }}
+            {{ form.company_role.label (size=32,class_='blue') }}
             {{ form.company_role }}
         </p>
         <p>
-            {{ form.office_address.label (size=32) }}
+            {{ form.office_address.label (size=32,class_='blue') }}
             {{ form.office_address }}
         </p>
         <p>
-            {{ form.phone_number.label (size=32) }}
+            {{ form.phone_number.label (size=32,class_='blue') }}
             {{ form.phone_number }}
         </p>
 
         <p>
-            {{ form.num_of_employees.label (size=32) }}
+            {{ form.num_of_employees.label (size=32,class_='blue') }}
             {{ form.num_of_employees }}
         </p>
         <p>
-            {{ form.num_of_departments.label (size=32) }}
+            {{ form.num_of_departments.label (size=32,class_='blue') }}
             {{ form.num_of_departments }}
         </p>
         <p>
-		    {{ form.username.label (size=32) }}
+		    {{ form.username.label (size=32,class_='blue') }}
 		    {{ form.username }}
 		</p>
 		<p>
-		    {{ form.password.label (size=32) }}
+		    {{ form.password.label (size=32,class_='blue') }}
 		    {{ form.password }}
 		</p>
         <p>
-		    {{ form.confirm.label (size=32) }}
+		    {{ form.confirm.label (size=32,class_='blue') }}
 		    {{ form.confirm }}
 		</p>
          <p>
