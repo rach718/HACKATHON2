@@ -99,7 +99,7 @@ def admin_panel():
 
 @app.route('/dashboard')
 def dashboard():
-        return render_template('dashboard.html')
+        return render_template('adminpanel.html')
 
 @app.route('/charts')
 def charts():
