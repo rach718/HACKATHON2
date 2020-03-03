@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa|Exo|Nanum+Gothic|Orbitron|Patrick+Hand|Quattrocento|Tomorrow&display=swap');
 
+
 html,h1,h2,p, button{
 	font-family: "Tomorrow";
 }
@@ -34,14 +35,17 @@ h5{
     text-align: center;
 }
 
-#contact {
-	height: 360px;
-	margin-top: 30px;
+#getintouch{
+    margin-top: 80px;
 }
 
+h2>i{
+    margin-left: 25px;
+}
 
-.shrinkbox {
-	width: 80%;
-	margin: auto;
-	padding-top: 25px;
+#topdash{
+    font-size: 40px;
+    font-family: Tomorrow;
+    text-align: center;
+
 }

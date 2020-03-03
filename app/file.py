@@ -7,7 +7,3 @@ class File():
            data = file.read()
            for line in data:
                print(line)
-
-# TODO how to read a file on server
-# GIT
-#

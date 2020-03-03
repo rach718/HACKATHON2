@@ -1,21 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-        <form method="post">
-		<p>
-            <input type="email" name="email">
-		</p>
-        <p>
-           <button type="submit">send</button>
-        </p>
-        <p>
-          <label for="myfile">Select a file:</label>
-          <input type="file" id="myfile" name="file">
-        </p>
-	</form>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}
+<title>ADMIN DASHBOARD</title>
+{% endblock %}
+
+
+{% block content %}
+{% include 'dashboard.html' %}
+{% endblock %}
+
+
+
+{% block js %}
+<script src="{{url_for('static', filename='js/scripts.js')}}"></script>
+
+{% endblock %}
+
+

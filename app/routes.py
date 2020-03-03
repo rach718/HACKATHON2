@@ -1,4 +1,3 @@
-# <<<<<<< HEAD
 from app import app, db
 from flask import flash, redirect, url_for, request, render_template
 from app.forms import *
@@ -79,7 +78,7 @@ def form():
 def products():
     return render_template('products.html')
 
-@app.route('/admin',methods=['GET','POST'])
+@app.route('/adminpanel',methods=['GET','POST'])
 def admin_panel():
     if request.method == 'GET':
         return render_template('adminpanel.html')
@@ -88,7 +87,7 @@ def admin_panel():
         email = request.form['email']
         file_data = request.form['file']
         file = File(file_data)
-        file.readFile()
+        # file.readFile()
         
         msg = Message('hey there', recipients=[email])
         msg.html = """<h5> Hello world </h>
@@ -98,6 +97,15 @@ def admin_panel():
     flash('Email was sent successfully')
     return redirect(url_for('admin_panel'))
 
-#=======
-#
-# >>>>>>> 443cc9ef3e0d0ab3c2fb9285af392e0839cb8a51
+@app.route('/dashboard')
+def dashboard():
+        return render_template('dashboard.html')
+
+@app.route('/charts')
+def charts():
+        return render_template('charts.html')
+
+@app.route('/tables')
+def tables():
+        return render_template('tables.html')
+
