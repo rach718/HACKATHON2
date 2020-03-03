@@ -100,7 +100,8 @@ def form():
 def products():
     return render_template('products.html')
 
-@app.route('/admin',methods=['GET','POST'])
+
+@app.route('/adminpanel',methods=['GET','POST'])
 @login_required
 def admin_panel():
     if request.method == 'GET':
@@ -110,6 +111,7 @@ def admin_panel():
         email = request.form['email']
         file_data = request.files['file']
         file = File(file_data)
+
         email_list = file.read_file()
         if email:
             msg = Message('hey there', recipients=[email])
@@ -137,3 +139,14 @@ def admin_panel():
 def logout():
     logout_user()
     return redirect(url_for('home'))
+
+
+@app.route('/charts')
+def charts():
+        return render_template('charts.html')
+
+@app.route('/tables')
+def tables():
+        return render_template('tables.html')
+
+
