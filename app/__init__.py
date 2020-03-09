@@ -22,15 +22,15 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_USERNAME'] = 'eranbolan91@gmail.com'
-app.config['MAIL_PASSWORD'] = 'eranbolan1991'
-app.config['MAIL_DEFAULT_SENDER'] = ('TallyBI','eranbolan@gmail.com')
+app.config['MAIL_USERNAME'] = 'racheljakob@gmail.com'
+app.config['MAIL_PASSWORD'] = 'Green6g!'
+app.config['MAIL_DEFAULT_SENDER'] = ('TallyBI','racheljakob@gmail.com')
 app.config['MAIL_MAX_EMAILS'] = 10
 app.config['MAIL_ASCII_ATTACHMENTS'] = False
 
 # Database Connection
 db_info = {'host': 'localhost',
-           'database': 'hackathon2',
+           'database': 'TallyBI',
            'psw': 'dev770',
            'user': 'racheljakob',
            'port': ''}
