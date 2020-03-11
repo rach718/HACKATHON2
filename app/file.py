@@ -8,8 +8,11 @@ class File():
 
     def read_file(self):
         file_name = secure_filename(self.file.filename)
-        self.file.save(os.path.join("app", "static", file_name))
-        with open(f"app/static/{file_name}") as f:
-            email_list = f.read().splitlines()
-        return email_list
+        if file_name == '':
+            return False
+        else:
+             self.file.save(os.path.join("app", "static", file_name))
+             with open(f"app/static/{file_name}") as f:
+                 email_list = f.read().splitlines()
+                 return email_list
 

@@ -12,7 +12,7 @@ class Admin(UserMixin,db.Model):
     company_name = db.Column(db.String(30), nullable=False)
     area_of_business = db.Column(db.String(40), nullable=False)
     office_address = db.Column(db.String(40), nullable=False)
-    phone_number = db.Column(db.Integer,nullable=False)
+    phone_number = db.Column(db.String(30),nullable=False)
     company_role = db.Column(db.String(20), nullable=False)
     num_employees = db.Column(db.Integer, nullable=False)
     num_departments = db.Column(db.Integer, nullable=False)
@@ -22,8 +22,14 @@ class Admin(UserMixin,db.Model):
         return f"<Admin: {self.username}>"
 
 
-class results_data(db.Model):
+class Question(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    question = db.Column(db.String(256),nullable=False)
+
+class Results_Data(db.Model):
     id = db.Column(db.Integer,primary_key=True)
     admin_id = db.Column(db.Integer,db.ForeignKey(Admin.id),nullable=False)
+    question_id = db.Column(db.Integer,db.ForeignKey(Question.id),nullable=False)
+    result = db.Column(db.Integer,nullable=False)
 
 

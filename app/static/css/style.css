@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa|Exo|Nanum+Gothic|Orbitron|Patrick+Hand|Quattrocento|Tomorrow&display=swap');
 
 
-html,h1,h2,p, button{
+html,h1,h2,p,h3, button{
 	font-family: "Tomorrow";
 }
 
@@ -47,8 +47,8 @@ h2>i{
     font-size: 40px;
     font-family: Tomorrow;
     text-align: center;
+    }
 
-<<<<<<< HEAD
 .shrinkbox {
 	width: 80%;
 	margin: auto;
@@ -59,6 +59,17 @@ h2>i{
     color:blue;
     font-weight: bold;
     margin-right:8px;
-=======
->>>>>>> 4280d3e6aaea986a1f04bab16a6121fbd3b0b127
+}
+
+#send_emails_box{
+        margin-top:30px;
+        display:flex;
+        flex-direction: column;
+        flex-wrap:wrap;
+        justify-content: center;
+        text-align:center;
+}
+
+#chart{
+       background-color:black;
 }

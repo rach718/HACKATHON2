@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
-<body>
-
+<body style="margin-left:30px;">
+        <form method="POST">
+            {% for question in questions_list %}
+                <h5>{{ question.question }}</h5>
+                    {% for i in range(5)%}
+                        <label>{{i+1}}</label>
+                        <input style="margin:8px;" type="radio" name="{{ question.id }}" value="{{i+1}}">
+                    {% endfor%}
+            <hr>
+            {% endfor %}
+            <br>
+            <button type="submit" class="btn btn-primary">SEND</button>
+        </form>
 </body>
 </html>

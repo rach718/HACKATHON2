@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 
 	{% block content %}
-        {% with messages = get_flashed_messages() %}
+        {% with messages = get_flashed_messages(with_categories=true) %}
   			{% if messages %}
-    		   {% for message in messages %}
-      			  {{ message }}
+    		   {% for category,message in messages %}
+      			  <div class="alert alert-{{category}}" role="alert">
+                      {{ message }}
+                  </div>
     		   {% endfor %}
   	         {% endif %}
         {% endwith %}
@@ -73,4 +75,4 @@
 		</p>
 	</form>
 
-	{% endblock %}ml>
+	{% endblock %}

@@ -25,7 +25,11 @@
       <form class="form-inline" method="POST">
       <input class="form-control mr-sm-2" type="email" placeholder="EMAIL" aria-label="email">
       <input class="form-control mr-sm-2" type="password" placeholder="PASSWORD" aria-label="password">
-        <a href="/login" class="btn btn-outline-dark" role="button">LOGIN</a>
+          {% if current_user.is_authenticated %}
+               <a href="/logout" class="btn btn-outline-dark" role="button">LOGOUT</a>
+          {% else %}
+                <a href="/login" type="submit" class="btn btn-outline-dark" role="button">LOGIN</a>
+          {% endif %}
         <a href="/registration" class="btn btn-outline-dark" role="button" style="margin-left:8px">REGISTER</a>
       </form>
 </nav>
