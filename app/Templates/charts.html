@@ -1,7 +1,7 @@
 {% include 'navbar.html' %}
 <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
 <link href="{{ url_for('static', filename='js/scripts.js') }}" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
@@ -28,11 +28,11 @@
                     <div class="container-fluid">
                         <h1 class="mt-4">Charts</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="adminpanel">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href='/dashboard'>Dashboard</a></li>
                             <li class="breadcrumb-item active">Charts</li>
                         </ol>
                         <div class="card mb-4">
-                            <div class="card-body">CHARTS ARE A GREAT VISUAL ANALYTICS TOOL TO MEASURE FORM RESULTS.
+                            <div class="card-body">CHARTS ARE A GREAT VISUAL ANALYTICS TOOL TO MEASURE FORM RESULTS
                         <div class="card mb-4">
                             <div class="card-header"><i class="fas fa-chart-area mr-1"></i>Area Chart</div>
                             <div class="card-body"><canvas id="myAreaChart" width="100%" height="30"></canvas></div>

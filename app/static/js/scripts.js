@@ -35,3 +35,5 @@ var path = window.location.href; // because the 'href' property of the DOM eleme
         $("body").toggleClass("sb-sidenav-toggled");
     });
 })(jQuery);
+
+

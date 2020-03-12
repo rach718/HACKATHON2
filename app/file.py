@@ -11,8 +11,8 @@ class File():
         if file_name == '':
             return False
         else:
-             self.file.save(os.path.join("app", "static", file_name))
-             with open(f"app/static/{file_name}") as f:
-                 email_list = f.read().splitlines()
-                 return email_list
+            self.file.save(os.path.join("app", "static", file_name))
+            with open(f"app/static/{file_name}") as f:
+                email_list = f.read().splitlines()
+                return email_list
 

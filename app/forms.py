@@ -6,7 +6,7 @@ from wtforms.validators import (data_required,EqualTo)
 class Login(FlaskForm):
     username = StringField(label="Username", validators=[data_required()])
     password = PasswordField(label="Password", validators=[data_required()])
-    submit = SubmitField()
+    submit = SubmitField(label='LOGIN')
 
 
 class Register(FlaskForm):
@@ -17,12 +17,12 @@ class Register(FlaskForm):
     first_name = StringField(label="First Name", validators=[data_required()])
     last_name = StringField(label="Last Name", validators=[data_required()])
     company_name = StringField(label="Company Name", validators=[data_required()])
-    area_of_business = StringField(label="Business Area",validators=[data_required()])
+    area_of_business = StringField(label="Area of Business",validators=[data_required()])
     office_address = StringField(label="Office Address", validators=[data_required()])
     phone_number = IntegerField(label="Phone Number",validators=[data_required()])
     company_role = StringField(label="Company Role", validators=[data_required()])
-    num_of_employees = IntegerField(label="employees Number",validators=[data_required()])
-    num_of_departments = IntegerField(label="Departments Number",validators=[data_required()])
+    num_of_employees = IntegerField(label="Number of Employees",validators=[data_required()])
+    num_of_departments = IntegerField(label="Number of Departments",validators=[data_required()])
 
     recaptcha = RecaptchaField()
     submit = SubmitField()

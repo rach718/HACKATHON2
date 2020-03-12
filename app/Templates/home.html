@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 
-
 {% block title %}
     <title>TallyBI</title>
 
@@ -10,7 +9,7 @@
 {% block content %}
     <br>
     <h1>TallyBI</h1>
-	<h5>Your Business Intelligence Employee Management Tracker</h5>
+	<h5 style="text-align:center">Your Business Intelligence Employee Management Tracker</h5>
 	<br>
 
   <div class="jumbotron">
@@ -24,7 +23,7 @@
 <br>
 <br>
 
-<div class="container">
+<div class="container" style="text-align: center">
     <div class="row">
         <div class="col-md-4">
             <div class="card card-success">
@@ -55,7 +54,7 @@
                     </li>
                 </ul>
                 <div class="card-footer">
-                    <a class="btn btn-lg btn-block btn-success">Download</a>
+                    <a class="btn btn-lg btn-block btn-success" href="/purchase"">Purchase Free</a>
                 </div>
             </div>
         </div>
@@ -88,7 +87,7 @@
                     </li>
                 </ul>
                 <div class="card-footer">
-                    <a class="btn btn-lg btn-block btn-info">Purchase</a>
+                    <a class="btn btn-lg btn-block btn-info" href="/purchase">Purchase</a>
                 </div>
             </div>
         </div>
@@ -99,7 +98,7 @@
                 </div>
                 <div class="card-block text-xs-center">
                     <p class="lead">
-                        <strong>$699.99 / year</strong>
+                        <strong>$799.99 / year</strong>
                     </p>
                 </div>
                 <ul class="list-group list-group-flush text-xs-center">
@@ -121,7 +120,7 @@
                     </li>
                 </ul>
                 <div class="card-footer">
-                    <a class="btn btn-lg btn-block btn-primary">Purchase</a>
+                    <a class="btn btn-lg btn-block btn-primary" href="/purchase">Purchase</a>
                 </div>
             </div>
         </div>
@@ -132,13 +131,13 @@
 <section id="contact">
 <div class="container">
 <div class="row">
-	<div id="getintouch" class="col-md-4 offset-md-2" >
+	<div id="getintouch" class="col-md-3 offset-md-2" >
 		<h2>GET IN TOUCH<h2>
 			<i class="fa fa-github" style="font-size:35px;color:#007bff"></i>
 			<i class="fa fa-linkedin-square" style="font-size:35px;color:#007bff"></i>
             <i class="fa fa-facebook-official" style="font-size:35px;color:#007bff"></i>
     </div>
-			<form id="footer" class="col-md-5">
+			<form id="footer" class="col-md-6">
 				<div class="form-group">
 					<label for="usr"></label>
 					<input type="text" class="form-control" id="usr" placeholder="Your Name">
@@ -148,7 +147,7 @@
 					<label for="comment"></label>
 					<textarea class="form-control" rows="4" id="comment"placeholder="Leave us a message!"></textarea>
 				</div>
-				<button type="submit" class="btn btn-primary">Send</button>
+				<button type="submit" class="btn btn-primary">SEND</button>
 			</form>
 </div>
 </div>

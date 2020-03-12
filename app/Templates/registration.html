@@ -10,69 +10,75 @@
     		   {% endfor %}
   	         {% endif %}
         {% endwith %}
-
-    <h1>Please fill the following inputs</h1>
+<br>
+<div id="layoutAuthentication">
+    <div id="layoutAuthentication_content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="card shadow-lg border-5 rounded-lg mt-5">
+                        <div class="card-header bg-primary"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
+                        <div class="card-body">
 
 	<form method="POST">
         <p>
-            {{ form.first_name.label(size=32,class_='blue') }}
-            {{ form.first_name }}
+            {{ form.first_name.label }}
+            {{ form.first_name (size ="40")}}
         </p>
         <p>
-            {{ form.last_name.label (size=32,class_='blue') }}
-            {{ form.last_name }}
+            {{ form.last_name.label }}
+            {{ form.last_name (size ="40")}}
         </p>
         <p>
-            {{ form.email.label (size=32,class_='blue') }}
-            {{ form.email }}
+            {{ form.email.label}}
+            {{ form.email (size ="40")}}
         </p>
         <p>
-            {{ form.company_name.label (size=32,class_='blue') }}
-            {{ form.company_name }}
+            {{ form.company_name.label}}
+            {{ form.company_name (size ="40")}}
         </p>
         <p>
-            {{ form.area_of_business.label (size=32,class_='blue') }}
-            {{ form.area_of_business }}
+            {{ form.area_of_business.label (size=50,class_='blue') }}
+            {{ form.area_of_business (size ="40")}}
         </p>
         <p>
-            {{ form.company_role.label (size=32,class_='blue') }}
-            {{ form.company_role }}
+            {{ form.company_role.label}}
+            {{ form.company_role (size ="40")}}
         </p>
         <p>
-            {{ form.office_address.label (size=32,class_='blue') }}
-            {{ form.office_address }}
+            {{ form.office_address.label}}
+            {{ form.office_address (size ="40")}}
         </p>
         <p>
-            {{ form.phone_number.label (size=32,class_='blue') }}
-            {{ form.phone_number }}
+            {{ form.phone_number.label}}
+            {{ form.phone_number (size ="40")}}
         </p>
 
         <p>
-            {{ form.num_of_employees.label (size=32,class_='blue') }}
-            {{ form.num_of_employees }}
+            {{ form.num_of_employees.label }}
+            {{ form.num_of_employees (size ="40")}}
         </p>
         <p>
-            {{ form.num_of_departments.label (size=32,class_='blue') }}
-            {{ form.num_of_departments }}
+            {{ form.num_of_departments.label }}
+            {{ form.num_of_departments (size ="40")}}
         </p>
         <p>
-		    {{ form.username.label (size=32,class_='blue') }}
-		    {{ form.username }}
+		    {{ form.username.label}}
+		    {{ form.username (size ="40")}}
 		</p>
 		<p>
-		    {{ form.password.label (size=32,class_='blue') }}
-		    {{ form.password }}
+		    {{ form.password.label }}
+		    {{ form.password (size ="40")}}
 		</p>
         <p>
-		    {{ form.confirm.label (size=32,class_='blue') }}
-		    {{ form.confirm }}
+		    {{ form.confirm.label}}
+		    {{ form.confirm (size ="40")}}
 		</p>
          <p>
-		    {{ form.recaptcha}}
+		    {{ form.recaptcha (size ="40")}}
 		</p>
         <p>
-		{{ form.submit }}
+		{{ form.submit(class='btn btn-primary')}}
 		</p>
 	</form>
-
 	{% endblock %}

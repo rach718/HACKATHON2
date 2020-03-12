@@ -27,15 +27,15 @@ def index():
 
 @app.route('/login',methods= ['GET','POST'])
 def login():
-    loginForm = Login()
+    login_form = Login()
     if request.method == "GET":
-        return render_template('login.html',form=loginForm)
+        return render_template('login.html',form=login_form)
 
     if request.method == 'POST':
-        if not loginForm.validate_on_submit():
-            user = Admin.query.filter_by(username=loginForm.username.data).first()
+        if not login_form.validate_on_submit():
+            user = Admin.query.filter_by(username=login_form.username.data).first()
             if user:
-                if check_password_hash(user.password, loginForm.password.data):
+                if check_password_hash(user.password, login_form.password.data):
                     #login_user(user, remember=loginForm.remember.data)
                     login_user(user)
                     return redirect(url_for('admin_panel'))
@@ -44,7 +44,7 @@ def login():
 
             flash('User doesn\'t exist')
             return redirect('login')
-    return render_template('login.html',form=loginForm)
+    return render_template('login.html',form=login_form)
 
 @app.route('/registration',methods= ['GET','POST'])
 def registration():
@@ -73,7 +73,7 @@ def registration():
                 return render_template('registration.html',form=register_form)
             else:
                 hashed_password = generate_password_hash(password, method='sha256')
-                admin = Admin(username=username,password=hashed_password,email=email,first_name=first_name,
+                admin = Admin(username=username, password=hashed_password, email=email, first_name=first_name,
                               last_name=last_name,company_name=company_name,area_of_business=area_of_business,
                               office_address=office_address,phone_number=phone_number,company_role=company_role,
                               num_employees=num_employees,num_departments=num_departments)
@@ -102,10 +102,17 @@ def form(id):
             result = Results_Data()
     return render_template('form.html',questions_list=questions)
 
-@app.route('/products')
-def products():
-    return render_template('products.html')
+@app.route('/purchase')
+def purchase():
+    return render_template('purchase.html')
 
+@app.route('/employeesandemails')
+def employeesandemails():
+    return render_template('employeesandemails.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 @app.route('/adminpanel',methods=['GET','POST'])
 @login_required
@@ -117,11 +124,13 @@ def admin_panel():
         four_counting = 0
         five_counting = 0
         charts_list = []
+        #getting into 'chart_data' all the result of the questions by admin ID
         chart_data = Results_Data.query.filter(Results_Data.admin_id == current_user.id).all()
+        #getting into 'question_list' all the questions
         question_list = Question.query.all()
-        for question in question_list:
+        for question in question_list: #first running on the question list
             for data in chart_data:
-                if question.id == data.question_id:
+                if question.id == data.question_id: # comparing each question id to question id from 'result_data'
                     if data.result == 1:
                         one_counting += 1
                     elif data.result == 2:
@@ -132,19 +141,19 @@ def admin_panel():
                         four_counting += 1
                     elif data.result == 5:
                         five_counting += 1
+            #creating the chart
             charts_list = create_chart(one_counting,two_counting,three_counting,four_counting,five_counting,question)
-            size =len(charts_list)
             one_counting = 0
             two_counting = 0
             three_counting = 0
             four_counting = 0
             five_counting = 0
-        print(len(charts_list))
         return render_template('adminpanel.html',chart=charts_list)
 
     if request.method == 'POST':
         #get email from text input
         email = request.form['email']
+        menager_message = request.form['textarea']
         #get file from upload file
         file_data = request.files['file']
         file = File(file_data)
@@ -153,7 +162,7 @@ def admin_panel():
         email_list = file.read_file()
         if email:  #check if email is empty or not
             msg = Message('hey there', recipients=[email])
-            msg.html = """<h5> Hello world </h>
+            msg.html = menager_message + """
                         <p><a href="http://127.0.0.1:5000/form/%s">Click here</a> to fill the form</p>   
                     """%current_user.id
             mail.send(msg)
@@ -163,15 +172,14 @@ def admin_panel():
             with mail.connect() as con:
                 for email in email_list:
                     msg = Message('Hey there',recipients=[email])
-                    msg.html = """
-                                <h5>Hello my fellows humans </h5>
+                    msg.html = menager_message + """
                               <p><a href="http://127.0.0.1:5000/form">Click here</a> to fill the form</p>
                                """
                     con.send(msg)
-                    flash('Email\'s were sent successfully','success')
+                    flash('Email\'s were sent successfully', 'success')
                 return redirect(url_for('admin_panel'))
         else:
-            flash('You must enter email or upload file','error')
+            flash('You must enter email or upload file', 'error')
             return redirect(url_for('admin_panel'))
 
 
